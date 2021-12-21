@@ -42,9 +42,9 @@
 
 ### Cloning the repo to your local system (If you already have git, installed in your system):
 
-- [Copy this link](https://github.com/vic778/To-Do-List/tree/develop)
+- [Copy this link](https://github.com/Buyaki01/js_capstone_project/tree/Get-AllItem)
 - Open your terminal or command line
-- Run "git clone [Paste this link](https://github.com/vic778/To-Do-List/tree/develop)"
+- Run "git clone [Paste this link](https://github.com/Buyaki01/js_capstone_project/tree/Get-AllItem)"
 - Open the folder with your code editor
 - Now You can edit the code and check the changes in the browser using Live Server
 
