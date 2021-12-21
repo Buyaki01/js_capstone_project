@@ -37,14 +37,12 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
+          // Creates `style` nodes from JS strings
           'style-loader',
+          // Translates CSS into CommonJS
           'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require('sass'),
-            },
-          },
+          // Compiles Sass to CSS
+          'sass-loader',
         ],
       },
     ],
