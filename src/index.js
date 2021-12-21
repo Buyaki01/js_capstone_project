@@ -7,8 +7,8 @@ const requestURLComments = 'https://us-central1-involvement-api.cloudfunctions.n
 const getComments = async () => {
   const data = await fetch(requestURLComments);
   const response = await data.json();
-  const scores = await response.result;
-  return scores;
+  const comments = await response.result;
+  return comments;
 };
 
 const addComment = async (user, comment) => {
