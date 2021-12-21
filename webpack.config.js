@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -42,6 +41,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
+              // eslint-disable-next-line global-require
               implementation: require('sass'),
             },
           },
