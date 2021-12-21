@@ -3,3 +3,31 @@ import './style.scss';
 import { showsList } from './scripts/Display/Show.js';
 
 showsList.renderCards();
+const requestURLComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/vBqRZTU315QO9ChybbKR/comments/';
+const getComments = async () => {
+  const data = await fetch(requestURLComments);
+  const response = await data.json();
+  const scores = await response.result;
+  return scores;
+};
+
+const addComment = async (user, comment) => {
+  fetch(requestURLComments, {
+    method: 'POST',
+    body: JSON.stringify({ user, comment }),
+    mode: 'cors',
+    headers: { 'Content-type': 'application/json' },
+  });
+};
+
+const inputForm = document.querySelector('.form');
+inputForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const getName = document.querySelector('#exampleFormControlInput1').value;
+  const getComment = document.querySelector('#exampleFormControlTextarea1').value;
+  addComment(getName, getComment);
+  inputForm.reset();
+});
+
+const viewCommentsBtn = document.querySelector('.display-comment-btn');
+viewCommentsBtn.addEventListener('click', getComments());
