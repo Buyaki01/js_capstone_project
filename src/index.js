@@ -1,13 +1,7 @@
-import _ from 'lodash';
-import './style.css';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.scss';
 
-function component() {
-  const element = document.createElement('div');
+import { showsList } from './scripts/Display/Show.js';
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
+showsList.renderCards();
