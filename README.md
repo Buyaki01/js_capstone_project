@@ -2,7 +2,12 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> In this activity,I set up a JavaScript project for the Leaderboard list application, using webpack and ESfeatures, including modules. I developed the first functional version of the application following a thread,
+> In this project we can:
+- retrieve elements from the database with the get method. 
+- retrieve each element with its details with the method get(Id)
+- view the elements with render. 
+- Index.html contains the div for each element I have just selected in my Show.js file in the Display folder. 
+
 
 
 ![](https://github.com/Buyaki01/js_capstone_project/blob/Get-AllItem/img/screen1.png)
@@ -12,6 +17,9 @@
 - CSS3 (Flex and media queries)
 - JAVASCRIPT
 - WEBPACK
+- BOOTSTRAP
+- SASS
+- API
 ## Live Demo
 
 [Live Demo Link]()
