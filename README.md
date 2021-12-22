@@ -1,74 +1,56 @@
-# js_capstone_project
-
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> In this activity,I set up a JavaScript project for the Leaderboard list application, using webpack and ESfeatures, including modules. I developed the first functional version of the application following a thread,
+# Movies revies Captones
+> This page allows you to see the reviews of different films that we get from an API, you can like or comment the movies if you like them or not.
 
+# Screenshots
+![screenshot](screenshot.png)
 
-![](https://github.com/vic778/Leaderboard/blob/develop/img/screen1.png)
 ## Built With
+- html
+- sass
+- bootstrap
+- javaScript
+- Webpack
 
-- HTML5
-- CSS3 (Flex and media queries)
-- JAVASCRIPT
-- WEBPACK
-## Live Demo
+## Feature Video
+Watch us give a little description of our web app.
+[Check it out!](https://www.loom.com/share/56c3887bdc754768a0b90cd1196725a4)
 
-[Live Demo Link]()
-
-## Author 1
-
-👤 **Victor Barh**
-
-- GitHub: [@Vvic778](https://github.com/vic778)
-- Twitter: [@victoirBarh](https://twitter.com/)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/victoir-barh)
 
 ## Getting Started
+To get a local copy follow the following steps !
+- open your terminal 
+- clone this repo `git clone https://github.com/bimbolabuari/mv-JavaScript-capstone.git`
+- Install the packages with npm `npm install`
+- run  `npm install @popperjs/core --save` to use the bootstrap features
+- use `npm run start` to build dist files and run local server
 
-### Prerequisites:
 
-- Web browser
-- Code Editor
-- Live Server Extension
+## Authors
 
-### Cloning the repo to your local system (If you already have git, installed in your system):
+👤 *Diego Solis*
 
-- [Copy this link](https://github.com/vic778/To-Do-List/tree/develop)
-- Open your terminal or command line
-- Run "git clone [Paste this link](https://github.com/vic778/To-Do-List/tree/develop)"
-- Open the folder with your code editor
-- Now You can edit the code and check the changes in the browser using Live Server
+- GitHub: [@disc3110](https://github.com/disc3110)
 
-### Check linter errors:
+👤 *Abimbola Buari*
 
-- Install npm
-- For HTML: Run npx hint .
-- For CSS: Run npx stylelint “**/*.css”
-- for javascript Run npx eslint .
+- GitHub: [@bimbolabuari](https://github.com/bimbolabuari)
+
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Start by:
-
-- Forking the project
-- Cloning the project to your local machine
-- cd into the Youtube-Replica project directory
-- Run git checkout -b your-branch-name
-- Make your contributions
-- Push your branch up to your forked repository
-- Open a Pull Request with a detailed description to the development branch of the original project for a review
-
-Feel free to check the [issues page](), contribute to the Project by creating an issue.
-
+<!--Feel free to check the [issues page](../../issues/).-->
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-- Project originally taken from The Odin Project
-- Project inspired by Microverse Program
-- Thanks for this Website Design "VCITOIR BARH"
+<!--## Acknowledgments-->
+
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
