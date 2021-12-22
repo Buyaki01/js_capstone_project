@@ -1,0 +1,59 @@
+$body-color: rgb(12, 0, 0);
+
+body {
+  color: $body-color;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.items-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 250px;
+  margin: 15px 5px;
+}
+
+.card-body p {
+  max-height: 240px;
+  overflow-y: hidden;
+  font-size: small;
+}
+
+.card-body > a {
+  text-decoration: none;
+  color: gray;
+}
+
+.card-body__likebtn {
+  background-color: transparent;
+  border: none;
+}
+
+.card-body__likes {
+  font-size: smaller;
+  text-align: end;
+}
+
+.card-footer {
+  position: relative;
+  bottom: 0;
+}
+
+.form-section,
+.comment-section {
+  margin: 10px 70px 20px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 150px;
+  }
+}
