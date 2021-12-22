@@ -39,12 +39,8 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require('sass'),
-            },
-          },
+          // Compiles Sass to CSS
+          'sass-loader',
         ],
       },
     ],
