@@ -1,56 +1,82 @@
+# js_capstone_project
+
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Movies revies Captones
-> This page allows you to see the reviews of different films that we get from an API, you can like or comment the movies if you like them or not.
+> In this project we can:
+- retrieve elements from the database with the get method. 
+- retrieve each element with its details with the method get(Id)
+- view the elements with render. 
+- Index.html contains the div for each element I have just selected in my Show.js file in the Display folder. 
 
-# Screenshots
-![screenshot](screenshot.png)
 
+
+![](https://github.com/Buyaki01/js_capstone_project/blob/Get-AllItem/img/screen1.png)
 ## Built With
-- html
-- sass
-- bootstrap
-- javaScript
-- Webpack
 
-## Feature Video
-Watch us give a little description of our web app.
-[Check it out!](https://www.loom.com/share/56c3887bdc754768a0b90cd1196725a4)
+- HTML5
+- CSS3 (Flex and media queries)
+- JAVASCRIPT
+- WEBPACK
+- BOOTSTRAP
+- SASS
+- API
+## Live Demo
 
+[Live Demo Link]()
+
+## Author 1
+
+👤 **Victor Barh**
+
+- GitHub: [@Vvic778](https://github.com/vic778)
+- Twitter: [@victoirBarh](https://twitter.com/)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/victoir-barh)
 
 ## Getting Started
-To get a local copy follow the following steps !
-- open your terminal 
-- clone this repo `git clone https://github.com/bimbolabuari/mv-JavaScript-capstone.git`
-- Install the packages with npm `npm install`
-- run  `npm install @popperjs/core --save` to use the bootstrap features
-- use `npm run start` to build dist files and run local server
 
+### Prerequisites:
 
-## Authors
+- Web browser
+- Code Editor
+- Live Server Extension
 
-👤 *Diego Solis*
+### Cloning the repo to your local system (If you already have git, installed in your system):
 
-- GitHub: [@disc3110](https://github.com/disc3110)
+- [Copy this link](https://github.com/Buyaki01/js_capstone_project/tree/Get-AllItem)
+- Open your terminal or command line
+- Run "git clone [Paste this link](https://github.com/Buyaki01/js_capstone_project/tree/Get-AllItem)"
+- Open the folder with your code editor
+- Now You can edit the code and check the changes in the browser using Live Server
 
-👤 *Abimbola Buari*
+### Check linter errors:
 
-- GitHub: [@bimbolabuari](https://github.com/bimbolabuari)
-
+- Install npm
+- For HTML: Run npx hint .
+- For CSS: Run npx stylelint “**/*.css”
+- for javascript Run npx eslint .
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-<!--Feel free to check the [issues page](../../issues/).-->
+Start by:
+
+- Forking the project
+- Cloning the project to your local machine
+- cd into the Youtube-Replica project directory
+- Run git checkout -b your-branch-name
+- Make your contributions
+- Push your branch up to your forked repository
+- Open a Pull Request with a detailed description to the development branch of the original project for a review
+
+Feel free to check the [issues page](), contribute to the Project by creating an issue.
+
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-<!--## Acknowledgments-->
-
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
+## Acknowledgments
+- Project originally taken from The Odin Project
+- Project inspired by Microverse Program
+- Thanks for this Website Design "VCITOIR BARH"
