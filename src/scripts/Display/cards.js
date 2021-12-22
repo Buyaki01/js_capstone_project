@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-syntax */
-import { tv } from '../API/Tv-show.js';
+import { tv } from '../API/TV-maze.js';
 import { counter } from '../utils/counter.js';
 
 class CardsUX {
@@ -8,11 +8,12 @@ class CardsUX {
   }
 
   renderCards = async () => {
-    const arrayOfShows = await tv.getAllItems();
-
+    const arrayOfShows = await tv.getAllShows();
+    const arrOfMoviesToDsiplay = arrayOfShows.slice(0, 49);
     const numberOfMovies = await counter.moviesCounter();
-    document.querySelector('.alert').innerHTML = `We have ${numberOfMovies} movies for you`;
-    for (const show of arrayOfShows) {
+    const numberOfMoviesInDisplay = counter.countElements(arrOfMoviesToDsiplay);
+    document.querySelector('.alert').innerHTML = `You are seeing ${numberOfMoviesInDisplay} of the ${numberOfMovies} movies we have for you`;
+    for (const show of arrOfMoviesToDsiplay) {
       let numOfLikes = 0;
       if (arrayOfShows.some((element) => element.item_id === show.id)) {
         numOfLikes = arrayOfShows.find((like) => like.item_id === show.id).likes;
@@ -24,12 +25,15 @@ class CardsUX {
     }
   }
 
-  setValuesOfCards = (element, show) => {
+  setValuesOfCards = (element, show, likes) => {
     element.querySelector('.card-img-top').src = show.image.medium;
     element.querySelector('.card-title').innerText = show.name;
     element.querySelector('.card-text').innerHTML = show.summary;
     const likeBtn = element.querySelector('.card-body__likebtn');
     likeBtn.setAttribute('data-id', show.id);
+    const displayLikes = element.querySelector('.card-body__likes');
+    displayLikes.classList.add(`movie-${show.id}`);
+    displayLikes.innerHTML = `${likes} people like this`;
   }
 }
 
