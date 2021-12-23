@@ -2,6 +2,8 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../scss/style.css';
 import { showsList } from './Display/cards.js';
+import showPop from './Display/popup.js';
+import newCounter from './Display/counter.js';
 
 showsList.renderCards();
 const postURLComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o7hamWo6ePWlkw5D7zAB/comments';
@@ -55,3 +57,6 @@ const displayAllComments = async () => {
 const viewCommentsBtn = document.querySelector('.display-comment-btn');
 viewCommentsBtn.addEventListener('click', displayAllComments);
 displayAllComments();
+
+showPop();
+newCounter();
