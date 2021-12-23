@@ -1,4 +1,4 @@
-import request from '../utils/api-request';
+import request from '../utils/api-request.js';
 
 class InvolvementAPI {
   constructor() {
