@@ -7,18 +7,18 @@ import newCounter from './Display/counter.js';
 
 showsList.renderCards();
 const postURLComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o7hamWo6ePWlkw5D7zAB/comments';
-const getURLComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o7hamWo6ePWlkw5D7zAB/comments?item_id=item1';
-const getComments = async () => {
-  const data = await fetch(getURLComments);
+const getURLComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o7hamWo6ePWlkw5D7zAB/comments';
+const getComments = async (itemId) => {
+  const data = await fetch(`${getURLComments}?item_id=${itemId}`);
   const response = await data.json();
   return response;
 };
 
-const addComment = async (getName, getComment) => {
+const addComment = async (getId, getName, getComment) => {
   fetch(postURLComments, {
     method: 'POST',
     body: JSON.stringify({
-      item_id: 'item1',
+      item_id: getId,
       username: getName,
       comment: getComment,
     }),
@@ -32,7 +32,8 @@ inputForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const getName = document.querySelector('#exampleFormControlInput1').value;
   const getComment = document.querySelector('#exampleFormControlTextarea1').value;
-  addComment(getName, getComment);
+  const getId = inputForm.dataset.id;
+  addComment(getId, getName, getComment);
   inputForm.reset();
 });
 
@@ -47,16 +48,23 @@ const commentElement = (getDate, getName, getComment) => {
   displayComment.appendChild(commentContainer);
 };
 
-const displayAllComments = async () => {
-  const allComments = await getComments();
-  allComments.forEach((comment) => {
-    commentElement(comment.creation_date, comment.username, comment.comment);
-  });
+const displayAllComments = async (itemId) => {
+  const allComments = await getComments(itemId);
+  if (allComments) {
+    allComments.forEach((comment) => {
+      commentElement(comment.creation_date, comment.username, comment.comment);
+    });
+  }
 };
 
 const viewCommentsBtn = document.querySelector('.display-comment-btn');
-viewCommentsBtn.addEventListener('click', displayAllComments);
-displayAllComments();
-
+viewCommentsBtn.addEventListener('click', () => {
+  const itemId = viewCommentsBtn.dataset.id;
+  displayAllComments(itemId);
+});
+const closeBtn = document.querySelector('.btn-close');
+closeBtn.addEventListener('click', () => {
+  displayComment.innerHTML = '';
+});
 showPop();
 newCounter();

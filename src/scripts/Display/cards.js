@@ -23,6 +23,14 @@ class CardsUX {
       }
       const clone = this.itemsList.firstElementChild.cloneNode(true);
       clone.classList.remove('d-none');
+      const footer = clone.querySelector('.card-footer');
+      const commentBtn = footer.querySelector('a');
+      commentBtn.addEventListener('click', () => {
+        const inputForm = document.querySelector('.form');
+        const viewCommentsBtn = document.querySelector('.display-comment-btn');
+        inputForm.dataset.id = show.id;
+        viewCommentsBtn.dataset.id = show.id;
+      });
       this.setValuesOfCards(clone, show, numOfLikes);
       this.itemsList.appendChild(clone);
     }
