@@ -21,25 +21,26 @@
   },
   "homepage": "https://github.com/Buyaki01/js_capstone_project#r",
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.14.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.5",
     "babel-eslint": "^10.1.0",
-    "css-loader": "^6.2.0",
+    "css-loader": "^6.5.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.4",
-    "hint": "^6.1.4",
-    "html-webpack-plugin": "^5.3.2",
-    "jest": "^27.0.6",
-    "sass": "^1.35.2",
-    "sass-loader": "^12.1.0",
-    "style-loader": "^3.2.1",
+    "eslint-plugin-import": "^2.25.3",
+    "hint": "^6.1.9",
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.5",
+    "sass": "^1.45.1",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.20.1",
-    "webpack": "^5.45.1",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "stylelint-scss": "^3.21.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^3.11.3"
   },
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.8",
@@ -47,6 +48,7 @@
     "bootstrap": "^5.0.2",
     "gh-pages": "^3.2.3",
     "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
     "popper.js": "^1.16.1"
   }
 }

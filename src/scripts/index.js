@@ -1,6 +1,6 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../scss/style.scss';
+import '../scss/style.css';
 import { showsList } from './Display/cards.js';
 import showPop from './Display/popup.js';
 import newCounter from './Display/counter.js';
@@ -31,9 +31,13 @@ const inputForm = document.querySelector('.form');
 inputForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const getName = document.querySelector('#exampleFormControlInput1').value;
+<<<<<<< HEAD
   const getComment = document.querySelector(
     '#exampleFormControlTextarea1',
   ).value;
+=======
+  const getComment = document.querySelector('#exampleFormControlTextarea1').value;
+>>>>>>> develop
   addComment(getName, getComment);
   inputForm.reset();
 });
@@ -48,6 +52,7 @@ const commentElement = (getDate, getName, getComment) => {
   commentContainer.appendChild(commentData);
   displayComment.appendChild(commentContainer);
 };
+<<<<<<< HEAD
 commentElement();
 
 // const displayAllComments = async () => {
@@ -75,3 +80,16 @@ displayCommentBtn.addEventListener('click', () => {
 
 showPop();
 newCounter();
+=======
+
+const displayAllComments = async () => {
+  const allComments = await getComments();
+  allComments.forEach((comment) => {
+    commentElement(comment.creation_date, comment.username, comment.comment);
+  });
+};
+
+const viewCommentsBtn = document.querySelector('.display-comment-btn');
+viewCommentsBtn.addEventListener('click', displayAllComments);
+displayAllComments();
+>>>>>>> develop
