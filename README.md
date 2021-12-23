@@ -7,7 +7,7 @@
 
 
 
-![](https://github.com/Buyaki01/js_capstone_project/blob/Get-AllItem/img/screen1.png)
+![](https://github.com/Buyaki01/js_capstone_project/blob/test-counter/img/screen3.png)
 ## Built With
 
 - HTML5
