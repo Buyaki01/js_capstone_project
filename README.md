@@ -2,15 +2,12 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> In this project we can:
-- retrieve elements from the database with the get method. 
-- retrieve each element with its details with the method get(Id)
-- view the elements with render. 
-- Index.html contains the div for each element I have just selected in my Show.js file in the Display folder. 
+> in this part the user can test if the counter returns the exact number of people who visited an item 
+- run `npm test` 
 
 
 
-![](https://github.com/Buyaki01/js_capstone_project/blob/Get-AllItem/img/screen1.png)
+![](https://github.com/Buyaki01/js_capstone_project/blob/test-counter/img/screen3.png)
 ## Built With
 
 - HTML5
@@ -22,7 +19,7 @@
 - API
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://jscapstone-prject.netlify.app/)
 
 ## Author 1
 
