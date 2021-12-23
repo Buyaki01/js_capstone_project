@@ -31,13 +31,7 @@ const inputForm = document.querySelector('.form');
 inputForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const getName = document.querySelector('#exampleFormControlInput1').value;
-<<<<<<< HEAD
-  const getComment = document.querySelector(
-    '#exampleFormControlTextarea1',
-  ).value;
-=======
   const getComment = document.querySelector('#exampleFormControlTextarea1').value;
->>>>>>> develop
   addComment(getName, getComment);
   inputForm.reset();
 });
@@ -52,35 +46,6 @@ const commentElement = (getDate, getName, getComment) => {
   commentContainer.appendChild(commentData);
   displayComment.appendChild(commentContainer);
 };
-<<<<<<< HEAD
-commentElement();
-
-// const displayAllComments = async () => {
-//   const allComments = await getComments();
-//   allComments.forEach((comment) => {
-//     commentElement(comment.creation_date, comment.username, comment.comment);
-//   });
-// };
-
-// const viewCommentsBtn = document.querySelector('.display-comment-btn');
-// viewCommentsBtn.addEventListener('click', displayAllComments());
-const displayCommentBtn = document.querySelector('.display-comment-btn');
-displayCommentBtn.addEventListener('click', () => {
-  getComments().then((data) => {
-    displayComment.innerHTML = '';
-    data.forEach((data) => {
-      const commentList = document.createElement('div');
-      const commentText = document.createElement('p');
-      commentText.innerHTML = `${data.creation_date}  ${data.username}: ${data.comment}`;
-      commentList.appendChild(commentText);
-      displayComment.appendChild(commentList);
-    });
-  });
-});
-
-showPop();
-newCounter();
-=======
 
 const displayAllComments = async () => {
   const allComments = await getComments();
@@ -92,4 +57,6 @@ const displayAllComments = async () => {
 const viewCommentsBtn = document.querySelector('.display-comment-btn');
 viewCommentsBtn.addEventListener('click', displayAllComments);
 displayAllComments();
->>>>>>> develop
+
+showPop();
+newCounter();
