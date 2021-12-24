@@ -4,28 +4,9 @@ import '../scss/style.css';
 import { showsList } from './Display/cards.js';
 import showPop from './Display/popup.js';
 import newCounter from './Display/counter.js';
+import {getComments, commentsCounter, addComment} from './comments.js'
 
 showsList.renderCards();
-const postURLComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o7hamWo6ePWlkw5D7zAB/comments';
-const getURLComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o7hamWo6ePWlkw5D7zAB/comments';
-const getComments = async (itemId) => {
-  const data = await fetch(`${getURLComments}?item_id=${itemId}`);
-  const response = await data.json();
-  return response;
-};
-
-const addComment = async (getId, getName, getComment) => {
-  fetch(postURLComments, {
-    method: 'POST',
-    body: JSON.stringify({
-      item_id: getId,
-      username: getName,
-      comment: getComment,
-    }),
-    mode: 'cors',
-    headers: { 'Content-type': 'application/json' },
-  });
-};
 
 const inputForm = document.querySelector('.form');
 inputForm.addEventListener('submit', (e) => {
@@ -48,6 +29,12 @@ const commentElement = (getDate, getName, getComment) => {
   displayComment.appendChild(commentContainer);
 };
 
+const displayCommentCount = async (itemId) => {
+  const noOfComments = await commentsCounter(itemId);
+  const commentsSect = document.querySelector('.commentSection'); 
+  commentsSect.innerHTML = `${noOfComments}`;
+};
+
 const displayAllComments = async (itemId) => {
   const allComments = await getComments(itemId);
   if (allComments) {
@@ -55,10 +42,12 @@ const displayAllComments = async (itemId) => {
       commentElement(comment.creation_date, comment.username, comment.comment);
     });
   }
+  displayCommentCount(itemId);
 };
 
 const viewCommentsBtn = document.querySelector('.display-comment-btn');
 viewCommentsBtn.addEventListener('click', () => {
+  displayComment.innerHTML = '';
   const itemId = viewCommentsBtn.dataset.id;
   displayAllComments(itemId);
 });
@@ -68,3 +57,4 @@ closeBtn.addEventListener('click', () => {
 });
 showPop();
 newCounter();
+export default commentsCounter;
