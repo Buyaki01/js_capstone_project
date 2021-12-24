@@ -1,7 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../scss/style.css';
-import { showsList } from './Display/cards.js';
+import showsList from './Display/cards.js';
 import showPop from './Display/popup.js';
 import newCounter from './Display/counter.js';
 import { getComments, commentsCounter, addComment } from './comments.js';

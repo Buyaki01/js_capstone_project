@@ -1,4 +1,4 @@
-import { counter } from '../utils/counter.js';
+import counter from '../utils/counter.js';
 
 jest.mock('../API/TV-maze.js');
 

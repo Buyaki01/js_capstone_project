@@ -1,4 +1,4 @@
-import { involvement } from '../API/Involvement.js';
+import involvement from '../API/Involvement.js';
 
 class Listeners {
   addLikeListener = (event) => {
@@ -14,4 +14,4 @@ class Listeners {
 }
 
 const elisteners = new Listeners();
-export { elisteners };
+export default elisteners;

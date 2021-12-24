@@ -24,4 +24,4 @@ class TvAPI {
 }
 
 const tv = new TvAPI();
-export { tv };
+export default tv;

@@ -27,4 +27,4 @@ class InvolvementAPI {
 
 const involvement = new InvolvementAPI();
 
-export { involvement };
+export default involvement;

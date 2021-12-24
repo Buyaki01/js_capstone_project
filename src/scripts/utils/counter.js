@@ -1,4 +1,4 @@
-import { tv } from '../API/TV-maze.js';
+import tv from '../API/TV-maze.js';
 
 class Counter {
   countElements = (array) => array.length
@@ -10,4 +10,4 @@ class Counter {
 }
 
 const counter = new Counter();
-export { counter };
+export default counter;
