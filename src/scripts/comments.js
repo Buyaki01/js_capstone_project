@@ -9,7 +9,7 @@ const getComments = async (itemId) => {
 const commentsCounter = async (itemId) => {
   const arrayOfComments = await getComments(itemId);
   return arrayOfComments.length;
-}
+};
 
 const addComment = async (getId, getName, getComment) => {
   fetch(postURLComments, {
@@ -23,4 +23,4 @@ const addComment = async (getId, getName, getComment) => {
     headers: { 'Content-type': 'application/json' },
   });
 };
-export {getComments, commentsCounter, addComment};
+export { getComments, commentsCounter, addComment };

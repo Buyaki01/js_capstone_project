@@ -4,7 +4,7 @@ import '../scss/style.css';
 import { showsList } from './Display/cards.js';
 import showPop from './Display/popup.js';
 import newCounter from './Display/counter.js';
-import {getComments, commentsCounter, addComment} from './comments.js'
+import { getComments, commentsCounter, addComment } from './comments.js';
 
 showsList.renderCards();
 
@@ -31,7 +31,7 @@ const commentElement = (getDate, getName, getComment) => {
 
 const displayCommentCount = async (itemId) => {
   const noOfComments = await commentsCounter(itemId);
-  const commentsSect = document.querySelector('.commentSection'); 
+  const commentsSect = document.querySelector('.commentSection');
   commentsSect.innerHTML = `${noOfComments}`;
 };
 
