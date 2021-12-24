@@ -4,35 +4,17 @@ import '../scss/style.css';
 import { showsList } from './Display/cards.js';
 import showPop from './Display/popup.js';
 import newCounter from './Display/counter.js';
+import { getComments, commentsCounter, addComment } from './comments.js';
 
 showsList.renderCards();
-const postURLComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o7hamWo6ePWlkw5D7zAB/comments';
-const getURLComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o7hamWo6ePWlkw5D7zAB/comments?item_id=item1';
-const getComments = async () => {
-  const data = await fetch(getURLComments);
-  const response = await data.json();
-  return response;
-};
-
-const addComment = async (getName, getComment) => {
-  fetch(postURLComments, {
-    method: 'POST',
-    body: JSON.stringify({
-      item_id: 'item1',
-      username: getName,
-      comment: getComment,
-    }),
-    mode: 'cors',
-    headers: { 'Content-type': 'application/json' },
-  });
-};
 
 const inputForm = document.querySelector('.form');
 inputForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const getName = document.querySelector('#exampleFormControlInput1').value;
   const getComment = document.querySelector('#exampleFormControlTextarea1').value;
-  addComment(getName, getComment);
+  const getId = inputForm.dataset.id;
+  addComment(getId, getName, getComment);
   inputForm.reset();
 });
 
@@ -47,16 +29,32 @@ const commentElement = (getDate, getName, getComment) => {
   displayComment.appendChild(commentContainer);
 };
 
-const displayAllComments = async () => {
-  const allComments = await getComments();
-  allComments.forEach((comment) => {
-    commentElement(comment.creation_date, comment.username, comment.comment);
-  });
+const displayCommentCount = async (itemId) => {
+  const noOfComments = await commentsCounter(itemId);
+  const commentsSect = document.querySelector('.commentSection');
+  commentsSect.innerHTML = `${noOfComments}`;
+};
+
+const displayAllComments = async (itemId) => {
+  const allComments = await getComments(itemId);
+  if (allComments) {
+    allComments.forEach((comment) => {
+      commentElement(comment.creation_date, comment.username, comment.comment);
+    });
+  }
+  displayCommentCount(itemId);
 };
 
 const viewCommentsBtn = document.querySelector('.display-comment-btn');
-viewCommentsBtn.addEventListener('click', displayAllComments);
-displayAllComments();
-
+viewCommentsBtn.addEventListener('click', () => {
+  displayComment.innerHTML = '';
+  const itemId = viewCommentsBtn.dataset.id;
+  displayAllComments(itemId);
+});
+const closeBtn = document.querySelector('.btn-close');
+closeBtn.addEventListener('click', () => {
+  displayComment.innerHTML = '';
+});
 showPop();
 newCounter();
+export default commentsCounter;
