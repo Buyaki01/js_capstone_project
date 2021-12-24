@@ -2,12 +2,14 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> in this part the user can test if the counter returns the exact number of people who visited an item 
-- run `npm test` 
-
-
-
+> Built the project with two external API's. The first API was the ![TVMaze](https://www.tvmaze.com/api) which allows us to get a list of movies with a unique movie id and for the given movie, it allows us to get detailed information about the movie. The second API was an ![Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270) to record the different user interactions (likes and comments).
+> The project also allows the user to
+- click on the Like button of the movie, the interaction is recorded in the Involvement API and the screen is updated.
+- click on the "Comments" button, the Comments popup appears and the user can add a comment, view the comments of the movie and even view the no. of comments written for the specific movie
+> We were also able to test the movies and comments counter using Jest
+ 
 ![](https://github.com/Buyaki01/js_capstone_project/blob/test-counter/img/screen3.png)
+
 ## Built With
 
 - HTML5
@@ -17,9 +19,15 @@
 - BOOTSTRAP
 - SASS
 - API
+
 ## Live Demo
 
-[Live Demo Link](https://jscapstone-prject.netlify.app/)
+[Live Demo Link](https://blissful-liskov-24fdaf.netlify.app)
+
+## LIVE VIDEO 
+
+[Live Video](https://drive.google.com/file/d/1ekppR2a4I8ayEXUchghFpJ140p_QP0nm/view)
+
 
 ## Author 1
 
@@ -28,6 +36,13 @@
 - GitHub: [@Vvic778](https://github.com/vic778)
 - Twitter: [@victoirBarh](https://twitter.com/)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/victoir-barh)
+
+## Author 2
+
+👤 **Ritta Buyaki**
+- Github: [@Buyaki01](https://github.com/Buyaki01)
+- Twitter: [ @BuyakiRitta](https://twitter.com/BuyakiRitta)
+- Linkedin: [Ritta Buyaki](https://www.linkedin.com/in/ritta-buyaki-b12904128/)
 
 ## Getting Started
 
@@ -39,9 +54,8 @@
 
 ### Cloning the repo to your local system (If you already have git, installed in your system):
 
-- [Copy this link](https://github.com/Buyaki01/js_capstone_project/tree/Get-AllItem)
 - Open your terminal or command line
-- Run "git clone [Paste this link](https://github.com/Buyaki01/js_capstone_project/tree/Get-AllItem)"
+- Run "git clone [Paste this link](https://github.com/Buyaki01/js_capstone_project)"
 - Open the folder with your code editor
 - Now You can edit the code and check the changes in the browser using Live Server
 
@@ -51,6 +65,10 @@
 - For HTML: Run npx hint .
 - For CSS: Run npx stylelint “**/*.css”
 - for javascript Run npx eslint .
+
+## Testing with Jest:
+- run `npm install --save-dev jest`
+- run `npm test`
 
 ## 🤝 Contributing
 
@@ -66,7 +84,7 @@ Start by:
 - Push your branch up to your forked repository
 - Open a Pull Request with a detailed description to the development branch of the original project for a review
 
-Feel free to check the [issues page](), contribute to the Project by creating an issue.
+Feel free to check the [issues page](https://github.com/Buyaki01/js_capstone_project/issues), contribute to the Project by creating an issue.
 
 
 ## Show your support
@@ -76,4 +94,4 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 - Project originally taken from The Odin Project
 - Project inspired by Microverse Program
-- Thanks for this Website Design "VCITOIR BARH"
+- Thanks for this Website Design "VCITOIR BARH And RITTA SWETA"
