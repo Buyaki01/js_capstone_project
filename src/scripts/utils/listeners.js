@@ -14,6 +14,4 @@ class Listeners {
 }
 
 const elisteners = new Listeners();
-
-// eslint-disable-next-line import/prefer-default-export
 export { elisteners };

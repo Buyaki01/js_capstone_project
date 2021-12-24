@@ -10,6 +10,4 @@ class Counter {
 }
 
 const counter = new Counter();
-
-// eslint-disable-next-line import/prefer-default-export
 export { counter };

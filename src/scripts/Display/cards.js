@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 import { tv } from '../API/TV-maze.js';
 import { involvement } from '../API/Involvement.js';
 import { elisteners } from '../utils/listeners.js';
@@ -50,6 +49,4 @@ class CardsUX {
 }
 
 const showsList = new CardsUX();
-
-// eslint-disable-next-line import/prefer-default-export
 export { showsList };

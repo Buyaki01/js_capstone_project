@@ -27,5 +27,4 @@ class InvolvementAPI {
 
 const involvement = new InvolvementAPI();
 
-// eslint-disable-next-line import/prefer-default-export
 export { involvement };

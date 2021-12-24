@@ -24,6 +24,4 @@ class TvAPI {
 }
 
 const tv = new TvAPI();
-
-// eslint-disable-next-line import/prefer-default-export
 export { tv };
