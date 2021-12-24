@@ -8,7 +8,7 @@
 - click on the "Comments" button, the Comments popup appears and the user can add a comment, view the comments of the movie and even view the no. of comments written for the specific movie
 > We were also able to test the movies and comments counter using Jest
  
-![](https://github.com/Buyaki01/js_capstone_project/blob/test-counter/img/screen3.png)
+![](https://github.com/Buyaki01/js_capstone_project/blob/readme/img/screen2.png)
 
 ## Built With
 
