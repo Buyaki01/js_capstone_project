@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> Built the project with two external API's. The first API was the ![TVMaze](https://www.tvmaze.com/api) which allows us to get a list of movies with a unique movie id and for the given movie, it allows us to get detailed information about the movie. The second API was an ![Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270) to record the different user interactions (likes and comments).
+> Built the project with two external API's. The first API was the [TVMaze](https://www.tvmaze.com/api) which allows us to get a list of movies with a unique movie id and for the given movie, it allows us to get detailed information about the movie. The second API was an ![Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270) to record the different user interactions (likes and comments).
 > The project also allows the user to
 - click on the Like button of the movie, the interaction is recorded in the Involvement API and the screen is updated.
 - click on the "Comments" button, the Comments popup appears and the user can add a comment, view the comments of the movie and even view the no. of comments written for the specific movie
