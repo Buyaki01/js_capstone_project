@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="./images/preview.png"> 
+    <title>Movies</title>
+</head>
+<body id="body">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bookmarked</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="alert alert-secondary text-center" role="alert">
+        A simple secondary alert—check it out!
+      </div>
+      <section class="items-list container-md my-5">
+        <div class="card d-none">
+          <img src="#" class="card-img-top img-1" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            
+            <a href="#">...see more</a>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-between">   
+              <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"  data-action="comment" id="commentButton">Comment</a>
+              <button type="button" class="card-body__likebtn">👍🏼</button>
+            </div>
+            <p class="card-body__likes text-muted"> 20 people like this</p>  
+          </div>
+        </div>
+      </section>  
+      <section class="modal fade popup-section" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="form-section">
+              <div class="form-section">
+                <img src="#" class="image" alt="...">
+              </div>
+            <div class="card-body">
+              <h5 class="title"></h5>
+              <p class="text"></p>
+            </div>
+            </div>
+            <div class="comment-section">
+              <div class="d-flex justify-content-between">
+              <h4>Comments(<span class="counter commentSection"></span>)</h4>
+              <button type="button" class="btn btn-primary ml-2 display-comment-btn">View comments</button>
+            </div>
+            <div class="display-comment"></div>
+            </div>
+            <div class="form-section">
+              <h5>Add a comment</h5>
+              <form class="form">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1"></label>
+                  <input type="text" class="form-control text-input" id="exampleFormControlInput1" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1"></label>
+                  <textarea class="form-control textarea" id="exampleFormControlTextarea1" rows="3"  placeholder="Your Insight"></textarea>
+                </div>
+                <div class="form-group mt-4">
+                  <button type="submit" class="btn btn-primary mt-2 mb-2 comment">Comment</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>  
+      <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+          <span class="text-muted">Created by Victor Barh & Ritta Sweta Under MIT License</span>
+        </div>
+      </footer>
+</body>
+</html>
